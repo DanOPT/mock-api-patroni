@@ -1,0 +1,16 @@
+{
+  "state": "running",
+  "postmaster_start_time": "2019-09-24 09:22:32.555 CEST",
+  "role": "master",
+  "server_version": 110005,
+  "cluster_unlocked": false,
+  "xlog": {
+    "location": 25624640
+  },
+  "timeline": 3,
+  "database_system_identifier": "6739877027151648096",
+  "patroni": {
+    "version": "1.6.0",
+    "scope": "batman"
+  }
+}

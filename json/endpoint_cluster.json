@@ -1,0 +1,33 @@
+{
+    "members": [
+      {
+        "name": "postgresql0",
+        "host": "127.0.0.1",
+        "port": 5432,
+        "role": "leader",
+        "state": "running",
+        "api_url": "http://127.0.0.1:8008/patroni",
+        "timeline": 5,
+        "tags": {
+          "clonefrom": true
+        }
+      },
+      {
+        "name": "postgresql1",
+        "host": "127.0.0.1",
+        "port": 5433,
+        "role": "replica",
+        "state": "running",
+        "api_url": "http://127.0.0.1:8009/patroni",
+        "timeline": 5,
+        "tags": {
+          "clonefrom": true
+        },
+        "lag": 0
+      }
+    ],
+    "scheduled_switchover": {
+      "at": "2019-09-24T10:36:00+02:00",
+      "from": "postgresql0"
+    }
+}

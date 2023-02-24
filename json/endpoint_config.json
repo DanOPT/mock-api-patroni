@@ -1,0 +1,18 @@
+{
+    "ttl": 30,
+    "loop_wait": 10,
+    "retry_timeout": 10,
+    "maximum_lag_on_failover": 1048576,
+    "postgresql": {
+      "use_slots": true,
+      "use_pg_rewind": true,
+      "parameters": {
+        "hot_standby": "on",
+        "wal_log_hints": "on",
+        "wal_level": "hot_standby",
+        "max_wal_senders": 5,
+        "max_replication_slots": 5,
+        "max_connections": "100"
+      }
+    }
+}
