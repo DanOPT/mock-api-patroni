@@ -9,7 +9,9 @@ app = FastAPI()
 #
 # Patroni formatted timestamp string
 #
-#now = datetime.now(timezone.utc)
+#now = datetime.utcnow()
+#timestamp = now.strftime('%Y-%m-%dT%H:%M:%S.%f%z')[:-2]
+#print(timestamp)
 
 class SwitchoverRequest(BaseModel):
     leader: str
